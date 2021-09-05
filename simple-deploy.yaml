@@ -4,6 +4,9 @@ metadata:
   name: nodejs-hello-deployment
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-hello  
   template:
     metadata:
       labels:
