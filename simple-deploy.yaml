@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-hello-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nodejs-hello
+    spec:
+      containers:
+      - name: node-hello
+        image: thejchaves/node-hello:0.1
+        ports:
+        - containerPort: 3000
